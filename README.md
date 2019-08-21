@@ -21,7 +21,6 @@ En este repositorio podrán encontrar:
 # Ayudantes
 Nombre               | Email           | Github
 -------------------- | ---------------- | ----------------
-
 Jerónimo Salazar |jcsalazar@uc.cl | jerosalazar
 Vicente Aguilera | vjaguilera@uc.cl | vjaguilera
 Alberto Busch | atbusch@uc.cl | Atbusch
