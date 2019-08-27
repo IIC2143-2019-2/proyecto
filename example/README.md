@@ -6,11 +6,11 @@ _Special thanks to [@daleal](https://github.com/daleal)._
 
 ## Prerequisites
 
-- Install [docker](https://docs.docker.com/install/)
+- Install [Docker](https://docs.docker.com/install/).
 
 ## Getting Started
 
-- Copy files & change app name from `example` on `Dockerfile` and `docker-compose.yml`
+- Copy files & change app name from `example` on `Dockerfile`, `entrypoint.sh` and `docker-compose.yml` to your app's name.
 
 - Create env file:
 
@@ -36,7 +36,7 @@ _Special thanks to [@daleal](https://github.com/daleal)._
     sudo chown -R $USER:$USER .
     ```
 
-- Connect the database (replace the content of `config/database.yml` with the following, change `example` with your app's name):
+- Connect the database (replace the content of `config/database.yml` with the following, change `example` with your app's name), replace `{example}` with your app's name:
 
     ```yaml
     default: &default
@@ -49,12 +49,12 @@ _Special thanks to [@daleal](https://github.com/daleal)._
 
     development:
       <<: *default
-      database: example_development
+      database: {example}_development
 
 
     test:
       <<: *default
-      database: example_test
+      database: {example}_test
     ```
 
 - Create the database:
