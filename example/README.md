@@ -7,6 +7,7 @@ _Special thanks to [@daleal](https://github.com/daleal)._
 ## Prerequisites
 
 - Install [Docker](https://docs.docker.com/install/).
+- Install [docker-compose](https://docs.docker.com/compose/install/) (for linux).
 
 ## Getting Started
 
@@ -36,7 +37,7 @@ _Special thanks to [@daleal](https://github.com/daleal)._
     sudo chown -R $USER:$USER .
     ```
 
-- Connect the database (replace the content of `config/database.yml` with the following, change `example` with your app's name), replace `{example}` with your app's name:
+- Connect the database (replace the content of `config/database.yml` with the following, change `{example}` with your app's name):
 
     ```yaml
     default: &default
@@ -61,6 +62,12 @@ _Special thanks to [@daleal](https://github.com/daleal)._
 
     ```bash
     docker-compose run web rails db:create
+    ```
+
+- Run the app:
+
+    ```bash
+    docker-compose up
     ```
 
 ## Useful Commands
@@ -95,3 +102,13 @@ _Special thanks to [@daleal](https://github.com/daleal)._
     sudo chown -R $USER:$USER .
     ```
 
+## Common errors
+- `Couldn't connect do Docker daemon`. Fix: run the command again with `sudo` at the beginning (Linux problem).
+- Error when creating the database. Fix: run `docker-compose up`, `docker-compose down` and run the command again.
+
+## Run an existing app
+If your coworker already created the app and you want to run the existing up:
+- Clone the repo.
+- Build the containers (`docker-compose build`).
+- Create the database at your computer (`docker-compose run web rails db:create`).
+- Run the app (`docker compose up`).
