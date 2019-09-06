@@ -111,4 +111,4 @@ If your coworker already created the app and you want to run the existing up:
 - Clone the repo.
 - Build the containers (`docker-compose build`).
 - Create the database at your computer (`docker-compose run web rails db:create`).
-- Run the app (`docker compose up`).
+- Run the app (`docker-compose up`).
